@@ -25,7 +25,7 @@ const argv = yargs(hideBin(process.argv)).command(packageCommand()).help().alias
 // eslint-disable-next-line
 function packageCommand() {
   return {
-    command: "package [action] [pack] [entry]",
+    command: 'package [action] [pack] [entry]',
     describe: "Manage packages",
     builder: (yargs) => {
       yargs.positional("action", {
