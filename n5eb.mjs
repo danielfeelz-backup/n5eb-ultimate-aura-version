@@ -325,7 +325,7 @@ class AdvancementConfig extends FormApplication {
     if (!this.options.dropKeyPath)
       throw new Error(
         "AdvancementConfig#options.dropKeyPath must be configured or #_onDrop must be overridden to support" +
-          " drag and drop on advancement config items."
+        " drag and drop on advancement config items."
       );
 
     // Try to extract the data
@@ -370,7 +370,7 @@ class AdvancementConfig extends FormApplication {
    * @throws An error if the item is invalid.
    * @protected
    */
-  _validateDroppedItem(event, item) {}
+  _validateDroppedItem(event, item) { }
 }
 
 /**
@@ -948,7 +948,7 @@ class SystemDataModel extends foundry.abstract.TypeDataModel {
       }
     }
 
-    const Base = class extends this {};
+    const Base = class extends this { };
     Object.defineProperty(Base, "_schemaTemplates", {
       value: Object.seal([...this._schemaTemplates, ...templates]),
       writable: false,
@@ -1172,8 +1172,8 @@ class ItemDataModel extends SystemDataModel {
     if (context.labels.duration) {
       context.labels.concentrationDuration = properties?.has("concentration")
         ? game.i18n.format("N5EB.ConcentrationDuration", {
-            duration: context.labels.duration.toLocaleLowerCase(game.i18n.lang),
-          })
+          duration: context.labels.duration.toLocaleLowerCase(game.i18n.lang),
+        })
         : context.labels.duration;
     }
 
@@ -2066,7 +2066,7 @@ class Advancement extends BaseAdvancement {
    * @param {object} data    Data from the advancement form.
    * @abstract
    */
-  async apply(level, data) {}
+  async apply(level, data) { }
 
   /* -------------------------------------------- */
 
@@ -2077,7 +2077,7 @@ class Advancement extends BaseAdvancement {
    * @param {object} data   Data from `Advancement#reverse` needed to restore this advancement.
    * @abstract
    */
-  async restore(level, data) {}
+  async restore(level, data) { }
 
   /* -------------------------------------------- */
 
@@ -2087,7 +2087,7 @@ class Advancement extends BaseAdvancement {
    * @returns {object}      Data that can be passed to the `Advancement#restore` method to restore this reversal.
    * @abstract
    */
-  async reverse(level) {}
+  async reverse(level) { }
 
   /* -------------------------------------------- */
 
@@ -2572,8 +2572,7 @@ class AbilityScoreImprovementAdvancement extends Advancement {
       });
       if (this.configuration.points)
         entries.push(
-          `<span class="tag">${game.i18n.localize("N5EB.AdvancementAbilityScoreImprovementPoints")}: <strong>${
-            this.configuration.points
+          `<span class="tag">${game.i18n.localize("N5EB.AdvancementAbilityScoreImprovementPoints")}: <strong>${this.configuration.points
           }</strong></span>`
         );
       return entries.filterJoin("\n");
@@ -4999,7 +4998,7 @@ var Filter = /*#__PURE__*/ Object.freeze({
   uniqueKeys: uniqueKeys,
 });
 
-const ApplicationV2 = foundry.applications?.api?.ApplicationV2 ?? class {};
+const ApplicationV2 = foundry.applications?.api?.ApplicationV2 ?? class { };
 const HandlebarsApplicationMixin = foundry.applications?.api?.HandlebarsApplicationMixin ?? ((cls) => cls);
 
 /**
@@ -6081,10 +6080,10 @@ class CompendiumBrowser extends HandlebarsApplicationMixin(ApplicationV2) {
         foundry.utils.getType(sort) === "function"
           ? sort
           : (lhs, rhs) => {
-              return String(foundry.utils.getProperty(lhs, sort)).localeCompare(
-                String(foundry.utils.getProperty(rhs, sort))
-              );
-            };
+            return String(foundry.utils.getProperty(lhs, sort)).localeCompare(
+              String(foundry.utils.getProperty(rhs, sort))
+            );
+          };
       documents.sort(sortFunc);
     }
 
@@ -6596,7 +6595,7 @@ function simplifyRollFormula(formula, { preserveFlavor = false, deterministic = 
     let multiplicative = false;
     let determ;
 
-    for (let i = roll.terms.length - 1; i >= 0; ) {
+    for (let i = roll.terms.length - 1; i >= 0;) {
       let paren;
       let term = roll.terms[i];
       if (term instanceof foundry.dice.terms.ParentheticalTerm) {
@@ -7021,8 +7020,8 @@ class SummonsData extends foundry.abstract.DataModel {
       this.item.type === "spell"
         ? "item.level"
         : this.classIdentifier
-        ? `classes.${this.classIdentifier}.levels`
-        : "details.level";
+          ? `classes.${this.classIdentifier}.levels`
+          : "details.level";
     return foundry.utils.getProperty(this.item.getRollData(), keyPath) ?? 0;
   }
 
@@ -8697,9 +8696,9 @@ class AdvancementManager extends Application {
       visibleIndex < 0
         ? ""
         : game.i18n.format("N5EB.AdvancementManagerSteps", {
-            current: visibleIndex + 1,
-            total: visibleSteps.length,
-          });
+          current: visibleIndex + 1,
+          total: visibleSteps.length,
+        });
     return `${game.i18n.localize("N5EB.AdvancementManagerTitle")} ${step}`;
   }
 
@@ -9644,8 +9643,8 @@ class EnchantmentData extends foundry.abstract.DataModel {
       item.type === "spell"
         ? "item.level"
         : item.system.enchantment?.classIdentifier
-        ? `classes.${item.system.enchantment?.classIdentifier}.levels`
-        : "details.level";
+          ? `classes.${item.system.enchantment?.classIdentifier}.levels`
+          : "details.level";
     const level = foundry.utils.getProperty(item.getRollData(), keyPath) ?? 0;
     return item.effects.filter((e) => {
       if (e.getFlag("n5eb", "type") !== "enchantment" || e.isAppliedEnchantment) return false;
@@ -11565,9 +11564,9 @@ class TraitFlow extends AdvancementFlow {
       hint: this.advancement.hint
         ? this.advancement.hint
         : localizedList({
-            grants: this.advancement.configuration.grants,
-            choices: this.advancement.configuration.choices,
-          }),
+          grants: this.advancement.configuration.grants,
+          choices: this.advancement.configuration.choices,
+        }),
       slots: this.prepareTraitSlots(available),
       available,
     });
@@ -14139,9 +14138,9 @@ class ActivatedEffectTemplate extends SystemDataModel {
     this.parent.labels.duration = [this.duration.value, CONFIG.N5EB.timePeriods[this.duration.units]].filterJoin(" ");
     this.parent.labels.activation = this.activation.type
       ? [
-          this.activation.type in CONFIG.N5EB.staticAbilityActivationTypes ? null : this.activation.cost,
-          CONFIG.N5EB.abilityActivationTypes[this.activation.type],
-        ].filterJoin(" ")
+        this.activation.type in CONFIG.N5EB.staticAbilityActivationTypes ? null : this.activation.cost,
+        CONFIG.N5EB.abilityActivationTypes[this.activation.type],
+      ].filterJoin(" ")
       : "";
 
     if (this.hasTarget) {
@@ -14163,9 +14162,8 @@ class ActivatedEffectTemplate extends SystemDataModel {
       this.parent.labels.range = range.filterJoin(" ");
     } else this.parent.labels.range = game.i18n.localize("N5EB.None");
     if (this.recharge)
-      this.parent.labels.recharge = `${game.i18n.localize("N5EB.Recharge")} [${`${this.recharge.value}${
-        parseInt(this.recharge.value) < 6 ? "+" : ""
-      }`}]`;
+      this.parent.labels.recharge = `${game.i18n.localize("N5EB.Recharge")} [${`${this.recharge.value}${parseInt(this.recharge.value) < 6 ? "+" : ""
+        }`}]`;
 
     // Substitute source UUIDs in consumption targets
     if (!this.parent.isEmbedded) return;
@@ -15769,10 +15767,10 @@ class Item5e extends SystemDocumentMixin(Item) {
       this.type === "class"
         ? this.system.levels
         : this.type === "subclass"
-        ? this.class?.system.levels
-        : this.type === "classmod"
-        ? this.system.levels
-        : this.parent?.system.details.level ?? 0;
+          ? this.class?.system.levels
+          : this.type === "classmod"
+            ? this.system.levels
+            : this.parent?.system.details.level ?? 0;
     return this.advancement.byType.ScaleValue.reduce((obj, advancement) => {
       obj[advancement.identifier] = advancement.valueForLevel(level);
       return obj;
@@ -16882,9 +16880,8 @@ class Item5e extends SystemDocumentMixin(Item) {
       }
 
       // Send the roll to chat with the status in the flavor text
-      const statusMessage = `<span class='${
-        rollResult <= 2 ? "ammunition-decrease" : "ammunition-remain"
-      }'>${game.i18n.format(statusMessageKey, statusMessageData)}</span>`;
+      const statusMessage = `<span class='${rollResult <= 2 ? "ammunition-decrease" : "ammunition-remain"
+        }'>${game.i18n.format(statusMessageKey, statusMessageData)}</span>`;
       await roll.toMessage({
         flavor: `${game.i18n.format("N5EB.AmmunitionRoll", { name: this.name })} <br> ${statusMessage}`,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -17367,9 +17364,8 @@ class Item5e extends SystemDocumentMixin(Item) {
       }
 
       // Send the roll to chat with the status in the flavor text
-      const statusMessage = `<span class='${
-        rollResult <= 2 ? "ammunition-decrease" : "ammunition-remain"
-      }'>${game.i18n.format(statusMessageKey, statusMessageData)}</span>`;
+      const statusMessage = `<span class='${rollResult <= 2 ? "ammunition-decrease" : "ammunition-remain"
+        }'>${game.i18n.format(statusMessageKey, statusMessageData)}</span>`;
       await roll.toMessage({
         flavor: `${game.i18n.format("N5EB.AmmunitionRoll", { name: item.name })} - ${ammo.name} <br> ${statusMessage}`,
         speaker: ChatMessage.getSpeaker({ actor: item.actor }),
@@ -17391,9 +17387,8 @@ class Item5e extends SystemDocumentMixin(Item) {
         // Send the ammo consumption to chat
         const statusMessage = `<span class='ammunition-decrease'>${game.i18n.localize("N5EB.AmmoConsumed")}</span>`;
         await ChatMessage.create({
-          flavor: `${game.i18n.format("N5EB.AmmunitionRoll", { name: item.name })} - ${
-            ammo.name
-          } <br> ${statusMessage}`,
+          flavor: `${game.i18n.format("N5EB.AmmunitionRoll", { name: item.name })} - ${ammo.name
+            } <br> ${statusMessage}`,
           speaker: ChatMessage.getSpeaker({ actor: item.actor }),
         });
       } else {
@@ -18961,9 +18956,8 @@ class SpellsUnlinkedConfig extends DocumentSheet {
 
   /** @inheritDoc */
   get title() {
-    return `${game.i18n.localize("JOURNALENTRYPAGE.N5EB.SpellList.UnlinkedSpells.Configuration")}: ${
-      this.document.name
-    }`;
+    return `${game.i18n.localize("JOURNALENTRYPAGE.N5EB.SpellList.UnlinkedSpells.Configuration")}: ${this.document.name
+      }`;
   }
 
   /* -------------------------------------------- */
@@ -20560,7 +20554,7 @@ async function enrichEmbed(config, label, options) {
     try {
       const parsed = foundry.utils.parseUuid(value);
       if (parsed.documentId) config.uuid = value;
-    } catch (err) {}
+    } catch (err) { }
   }
 
   config.doc = await fromUuid(config.uuid, { relative: options.relativeTo });
@@ -20600,8 +20594,8 @@ async function embedDocument(config, label, options) {
     config.doc instanceof Actor
       ? "system.details.biography.value"
       : game.user.isGM || config.doc.system.identified !== false
-      ? "system.description.value"
-      : "system.unidentified.description";
+        ? "system.description.value"
+        : "system.unidentified.description";
   const description = foundry.utils.getProperty(config.doc, keyPath);
   if (description === undefined) return null;
 
@@ -20728,9 +20722,8 @@ async function embedRollTable(config, label, options) {
     if (doc) return doc.toAnchor().outerHTML;
 
     // No doc found, create a broken anchor.
-    return `<a class="content-link broken"><i class="fas fa-unlink"></i>${
-      resultData.text || game.i18n.localize("Unknown")
-    }</a>`;
+    return `<a class="content-link broken"><i class="fas fa-unlink"></i>${resultData.text || game.i18n.localize("Unknown")
+      }</a>`;
   };
 
   const tbody = table.querySelector("tbody");
@@ -21043,8 +21036,8 @@ async function enrichItem(config, label, options) {
     options.relativeTo instanceof Item
       ? options.relativeTo.parent
       : options.relativeTo instanceof Actor
-      ? options.relativeTo
-      : null;
+        ? options.relativeTo
+        : null;
 
   // If config is an Item ID
   if (/^\w{16}$/.test(givenItem) && foundActor) foundItem = foundActor.items.get(givenItem);
@@ -22921,7 +22914,7 @@ class Actor5e extends SystemDocumentMixin(Actor) {
       case "npcLightArmor":
         ac.base =
           (level >= 17 ? 15 : level >= 14 ? 14 : level >= 11 ? 13 : level >= 7 ? 12 : 11) +
-            this.system.abilities.dex?.mod ?? 0;
+          this.system.abilities.dex?.mod ?? 0;
         ac.dex = this.system.abilities.dex?.mod ?? 0;
         break;
 
@@ -24798,10 +24791,10 @@ class Actor5e extends SystemDocumentMixin(Actor) {
     const combat = await super.rollInitiative(options);
     const combatants = this.isToken
       ? this.getActiveTokens(false, true).reduce((arr, t) => {
-          const combatant = game.combat.getCombatantByToken(t.id);
-          if (combatant) arr.push(combatant);
-          return arr;
-        }, [])
+        const combatant = game.combat.getCombatantByToken(t.id);
+        if (combatant) arr.push(combatant);
+        return arr;
+      }, [])
       : [game.combat.getCombatantByActor(this.id)];
 
     /**
@@ -25633,15 +25626,15 @@ class Actor5e extends SystemDocumentMixin(Actor) {
         restFlavor = fullRest
           ? `N5EB.${length}RestNormal`
           : longRest && newDay
-          ? "N5EB.LongRestOvernight"
-          : `N5EB.${length}RestNormal`;
+            ? "N5EB.LongRestOvernight"
+            : `N5EB.${length}RestNormal`;
         break;
       case "gritty":
         restFlavor = fullRest
           ? `N5EB.${length}RestGritty`
           : !longRest && newDay
-          ? "N5EB.ShortRestOvernight"
-          : `N5EB.${length}RestGritty`;
+            ? "N5EB.ShortRestOvernight"
+            : `N5EB.${length}RestGritty`;
         break;
       case "epic":
         restFlavor = `N5EB.${length}RestEpic`;
@@ -26271,13 +26264,13 @@ class Actor5e extends SystemDocumentMixin(Actor) {
       });
 
     // Add proficiency to the attribution
-    if (ac.prof !== 0) 
+    if (ac.prof !== 0)
       attribution.push({
         label: game.i18n.localize("N5EB.Proficiency"),
         mode: CONST.ACTIVE_EFFECT_MODES.ADD,
         value: ac.prof,
       });
-    
+
 
     if (attribution.length) {
       return new PropertyAttribution(this, attribution, "attributes.ac", { title }).renderTooltip();
@@ -27170,9 +27163,9 @@ class ItemGrantFlow extends AdvancementFlow {
       options:
         config.spell?.ability.size > 1
           ? config.spell.ability.reduce((obj, k) => {
-              obj[k] = CONFIG.N5EB.abilities[k]?.label;
-              return obj;
-            }, {})
+            obj[k] = CONFIG.N5EB.abilities[k]?.label;
+            return obj;
+          }, {})
           : null,
       selected:
         this.ability ?? this.retainedData?.ability ?? this.advancement.value.ability ?? config.spell?.ability.first(),
@@ -27546,7 +27539,7 @@ class SpellConfigurationData extends foundry.abstract.DataModel {
             const roll = new Roll(formula);
             updates["system.uses.value"] = roll.evaluateSync().total;
           }
-        } catch (e) {}
+        } catch (e) { }
       }
     }
     return updates;
@@ -35679,17 +35672,17 @@ class ActorMovementConfig extends BaseConfigSheet {
     const speeds =
       source.type === "group"
         ? {
-            land: "N5EB.MovementLand",
-            water: "N5EB.MovementWater",
-            air: "N5EB.MovementAir",
-          }
+          land: "N5EB.MovementLand",
+          water: "N5EB.MovementWater",
+          air: "N5EB.MovementAir",
+        }
         : {
-            walk: "N5EB.MovementWalk",
-            burrow: "N5EB.MovementBurrow",
-            climb: "N5EB.MovementClimb",
-            fly: "N5EB.MovementFly",
-            swim: "N5EB.MovementSwim",
-          };
+          walk: "N5EB.MovementWalk",
+          burrow: "N5EB.MovementBurrow",
+          climb: "N5EB.MovementClimb",
+          fly: "N5EB.MovementFly",
+          swim: "N5EB.MovementSwim",
+        };
 
     return {
       movement,
@@ -36212,7 +36205,7 @@ class TraitSelector extends BaseConfigSheet {
     if (["saves", "skills"].includes(trait))
       throw new Error(
         `TraitSelector does not support selection of ${trait}. That should be handled through ` +
-          "that type's more specialized configuration application."
+        "that type's more specialized configuration application."
       );
 
     super(actor, options);
@@ -36268,9 +36261,9 @@ class TraitSelector extends BaseConfigSheet {
       bypasses:
         "bypasses" in data
           ? Object.entries(CONFIG.N5EB.itemProperties).reduce((obj, [k, v]) => {
-              if (v.isPhysical) obj[k] = { label: v.label, chosen: data.bypasses.has(k) };
-              return obj;
-            }, {})
+            if (v.isPhysical) obj[k] = { label: v.label, chosen: data.bypasses.has(k) };
+            return obj;
+          }, {})
           : null,
       bypassesPath: "bypasses" in data ? `${path}.bypasses` : null,
     };
@@ -36835,8 +36828,7 @@ class ActorSheet5e extends ActorSheetMixin(ActorSheet) {
       [movement.climb, `${game.i18n.localize("N5EB.MovementClimb")} ${movement.climb}`],
       [
         movement.fly,
-        `${game.i18n.localize("N5EB.MovementFly")} ${movement.fly}${
-          movement.hover ? ` (${game.i18n.localize("N5EB.MovementHover")})` : ""
+        `${game.i18n.localize("N5EB.MovementFly")} ${movement.fly}${movement.hover ? ` (${game.i18n.localize("N5EB.MovementHover")})` : ""
         }`,
       ],
       [movement.swim, `${game.i18n.localize("N5EB.MovementSwim")} ${movement.swim}`],
@@ -36971,7 +36963,7 @@ class ActorSheet5e extends ActorSheetMixin(ActorSheet) {
    * Each subclass overrides this method to implement type-specific logic.
    * @protected
    */
-  _prepareItems() {}
+  _prepareItems() { }
 
   /* -------------------------------------------- */
 
@@ -37165,7 +37157,7 @@ class ActorSheet5e extends ActorSheetMixin(ActorSheet) {
    * @returns {boolean|void}
    * @protected
    */
-  _filterItem(item) {}
+  _filterItem(item) { }
 
   /* -------------------------------------------- */
 
@@ -38058,15 +38050,15 @@ class ActorSheet5eCharacter extends ActorSheet5e {
         if (item.system.attunement)
           ctx.attunement = item.system.attuned
             ? {
-                icon: "fa-sun",
-                cls: "attuned",
-                title: "N5EB.AttunementAttuned",
-              }
+              icon: "fa-sun",
+              cls: "attuned",
+              title: "N5EB.AttunementAttuned",
+            }
             : {
-                icon: "fa-sun",
-                cls: "not-attuned",
-                title: CONFIG.N5EB.attunementTypes[item.system.attunement],
-              };
+              icon: "fa-sun",
+              cls: "not-attuned",
+              title: CONFIG.N5EB.attunementTypes[item.system.attunement],
+            };
 
         // Prepare data needed to display expanded sections
         ctx.isExpanded = this._expanded.has(item.id);
@@ -39150,7 +39142,7 @@ class AttributesFields {
     const index = keys.findIndex((k) => k === this.traits.size);
     const sizeConfig =
       CONFIG.N5EB.actorSizes[
-        keys[this.parent.flags.n5eb?.powerfulBuild ? Math.min(index + 1, keys.length - 1) : index]
+      keys[this.parent.flags.n5eb?.powerfulBuild ? Math.min(index + 1, keys.length - 1) : index]
       ];
     const sizeMod = sizeConfig?.capacityMultiplier ?? sizeConfig?.token ?? 1;
     let maximumMultiplier;
@@ -40965,8 +40957,8 @@ function ActorSheetV2Mixin(Base) {
           system.activation.type === "fullturnaction"
             ? game.i18n.localize(abbr)
             : cost && abbr
-            ? `${cost}${game.i18n.localize(abbr)}`
-            : item.labels.activation;
+              ? `${cost}${game.i18n.localize(abbr)}`
+              : item.labels.activation;
 
         // Range
         const units = system.range?.units;
@@ -40994,8 +40986,8 @@ function ActorSheetV2Mixin(Base) {
             title: isAlways
               ? CONFIG.N5EB.spellPreparationModes.always.label
               : prepared
-              ? CONFIG.N5EB.spellPreparationModes.prepared.label
-              : game.i18n.localize("N5EB.SpellUnprepared"),
+                ? CONFIG.N5EB.spellPreparationModes.prepared.label
+                : game.i18n.localize("N5EB.SpellUnprepared"),
           };
         } else ctx.preparation = { applicable: false };
       }
@@ -42492,7 +42484,7 @@ class ActorSheet5eNPC extends ActorSheet5e {
    * @param {object} context  Context data for display.
    * @protected
    */
-  _prepareItem(item, context) {}
+  _prepareItem(item, context) { }
 
   /* -------------------------------------------- */
   /*  Event Listeners and Handlers
@@ -42774,7 +42766,7 @@ class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC) {
       }
       if (section.dataset.type === "feat") {
         if (!("activation.type" in section.dataset)) section.dataset.type = "passive";
-        for (let i = section.items.length; i--; ) {
+        for (let i = section.items.length; i--;) {
           const item = section.items[i];
           if (item.type === "class" || item.type === "subclass" || item.type === "classmod") {
             classes.push(item);
@@ -44185,11 +44177,11 @@ function AdoptedStyleSheetMixin(Base) {
      * @param {CSSStyleSheet} sheet  The sheet to adopt.
      * @abstract
      */
-    _adoptStyleSheet(sheet) {}
+    _adoptStyleSheet(sheet) { }
   };
 }
 
-const AbstractFormInputElement$1 = foundry.applications?.elements?.AbstractFormInputElement ?? class {};
+const AbstractFormInputElement$1 = foundry.applications?.elements?.AbstractFormInputElement ?? class { };
 
 /**
  * A custom checkbox implementation with more styling options.
@@ -45211,7 +45203,7 @@ class FiligreeBoxElement extends AdoptedStyleSheetMixin(HTMLElement) {
   }
 }
 
-const AbstractFormInputElement = foundry.applications?.elements?.AbstractFormInputElement ?? class {};
+const AbstractFormInputElement = foundry.applications?.elements?.AbstractFormInputElement ?? class { };
 
 /**
  * Input element that represents a three-state filter (include, exclude, or ignore). This is used for filters in
@@ -46010,7 +46002,7 @@ class InventoryElement extends HTMLElement {
       if (item) {
         item
           .update({ "system.ammunitionDie": newDie })
-          .then(() => {})
+          .then(() => { })
           .catch((err) => {
             console.error(`Failed to update ammunition die for item ${item.name}`, err);
           });
@@ -48286,9 +48278,9 @@ class ItemSheet5e extends ItemSheet {
     const baseIds =
       this.item.type === "equipment"
         ? {
-            ...CONFIG.N5EB.armorIds,
-            ...CONFIG.N5EB.shieldIds,
-          }
+          ...CONFIG.N5EB.armorIds,
+          ...CONFIG.N5EB.shieldIds,
+        }
         : CONFIG.N5EB[`${this.item.type}Ids`];
     if (baseIds === undefined) return {};
 
@@ -48382,9 +48374,9 @@ class ItemSheet5e extends ItemSheet {
           const label = CONFIG.N5EB.limitedUsePeriods[uses.per]?.formula
             ? ` (${game.i18n.format("N5EB.AbilityUseChargesLabel", { value: uses.value })})`
             : ` (${game.i18n.format("N5EB.AbilityUseConsumableLabel", {
-                max: uses.max,
-                per: uses.per,
-              })})`;
+              max: uses.max,
+              per: uses.per,
+            })})`;
           obj[i.id] = i.name + label;
         }
 
@@ -51924,7 +51916,7 @@ class TokenRingSamplerShaderV11 extends BaseSamplerShader {
     return true;
   }
 
-  set enabled(enabled) {}
+  set enabled(enabled) { }
 
   /* -------------------------------------------- */
 
@@ -52355,9 +52347,9 @@ class GroupActor extends ActorDataModel.mixin(CurrencyTemplate) {
       get() {
         return system.type.value === "encounter"
           ? system.members.reduce(
-              (xp, { actor, quantity }) => xp + (actor.system.details?.xp?.value ?? 0) * (quantity.value ?? 1),
-              0
-            )
+            (xp, { actor, quantity }) => xp + (actor.system.details?.xp?.value ?? 0) * (quantity.value ?? 1),
+            0
+          )
           : null;
       },
       configurable: true,
@@ -55541,8 +55533,8 @@ class ChatMessage5e extends ChatMessage {
             ? game.i18n.localize("N5EB.CriticalHit")
             : game.i18n.localize("N5EB.DamageRoll")
           : roll.type === "attack"
-          ? game.i18n.localize(`N5EB.Action${item.system.actionType.toUpperCase()}`)
-          : item.system.type?.label ?? game.i18n.localize(CONFIG.Item.typeLabels[item.type]);
+            ? game.i18n.localize(`N5EB.Action${item.system.actionType.toUpperCase()}`)
+            : item.system.type?.label ?? game.i18n.localize(CONFIG.Item.typeLabels[item.type]);
       const flavor = document.createElement("div");
       flavor.classList.add("n5eb2", "chat-card");
       flavor.innerHTML = `
@@ -55646,15 +55638,14 @@ class ChatMessage5e extends ChatMessage {
         <li data-uuid="${uuid}" class="target ${isMiss ? "miss" : "hit"}">
           <i class="fas ${isMiss ? "fa-times" : "fa-check"}"></i>
           <div class="name">${name}</div>
-          ${
-            ac
-              ? `
+          ${ac
+            ? `
           <div class="ac">
             <i class="fas fa-shield-halved"></i>
             <span>${ac}</span>
           </div>
           `
-              : ""
+            : ""
           }
         </li>
       `,
@@ -55703,18 +55694,17 @@ class ChatMessage5e extends ChatMessage {
           <div class="dice">
             <ol class="dice-rolls">
               ${dice.reduce(
-                (str, { result, classes }) => `
+        (str, { result, classes }) => `
                 ${str}<li class="roll ${classes}">${result}</li>
               `,
-                ""
-              )}
-              ${
-                constant
-                  ? `
+        ""
+      )}
+              ${constant
+          ? `
               <li class="constant"><span class="sign">${constant < 0 ? "-" : "+"}</span>${Math.abs(constant)}</li>
               `
-                  : ""
-              }
+          : ""
+        }
             </ol>
             <div class="total">
               ${config ? `<img src="${config.icon}" alt="${config.label}">` : ""}
@@ -55765,7 +55755,7 @@ class ChatMessage5e extends ChatMessage {
       constant: 0,
       dice: [],
     });
-    for (let i = roll.terms.length - 1; i >= 0; ) {
+    for (let i = roll.terms.length - 1; i >= 0;) {
       const term = roll.terms[i--];
       if (!(term instanceof foundry.dice.terms.NumericTerm) && !(term instanceof foundry.dice.terms.DiceTerm)) continue;
       const value = term.total;
@@ -56029,8 +56019,8 @@ class ChatMessage5e extends ChatMessage {
       );
     }
   }
-  
-  
+
+
 
   /* -------------------------------------------- */
 
