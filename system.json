@@ -18,8 +18,12 @@
       "flags": {}
     }
   ],
-  "esmodules": ["n5eb.mjs"],
-  "styles": ["n5eb.css"],
+  "esmodules": [
+    "n5eb.mjs"
+  ],
+  "styles": [
+    "n5eb.css"
+  ],
   "packs": [
     {
       "name": "items",
@@ -27,10 +31,18 @@
       "system": "n5eb",
       "path": "packs/items",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
         }
       }
     },
@@ -40,10 +52,12 @@
       "system": "n5eb",
       "path": "packs/jutsus",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["spell"]
+          "types": [
+            "spell"
+          ]
         }
       }
     },
@@ -53,10 +67,13 @@
       "system": "n5eb",
       "path": "packs/backgrounds",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["background", "feat"]
+          "types": [
+            "background",
+            "feat"
+          ]
         }
       }
     },
@@ -66,10 +83,12 @@
       "system": "n5eb",
       "path": "packs/traits-quirks",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -79,10 +98,15 @@
       "system": "n5eb",
       "path": "packs/class",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -92,10 +116,15 @@
       "system": "n5eb",
       "path": "packs/subclass",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -105,10 +134,13 @@
       "system": "n5eb",
       "path": "packs/clan",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["race", "feat"]
+          "types": [
+            "race",
+            "feat"
+          ]
         }
       }
     },
@@ -118,7 +150,7 @@
       "system": "n5eb",
       "path": "packs/rules",
       "type": "JournalEntry",
-      "private": false
+      "ownership": false
     },
     {
       "name": "conditions",
@@ -126,10 +158,12 @@
       "system": "n5eb",
       "path": "packs/conditions",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -139,10 +173,12 @@
       "system": "n5eb",
       "path": "packs/feats",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -152,10 +188,14 @@
       "system": "n5eb",
       "path": "packs/classmod",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat"]
+          "types": [
+            "class",
+            "subclass",
+            "feat"
+          ]
         }
       }
     },
@@ -165,10 +205,14 @@
       "system": "n5eb",
       "path": "packs/adversary",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -178,10 +222,13 @@
       "system": "n5eb",
       "path": "packs/adversary-traits",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat"]
+          "types": [
+            "npc",
+            "feat"
+          ]
         }
       }
     },
@@ -191,10 +238,13 @@
       "system": "n5eb",
       "path": "packs/adversary-passives",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat"]
+          "types": [
+            "npc",
+            "feat"
+          ]
         }
       }
     },
@@ -204,10 +254,13 @@
       "system": "n5eb",
       "path": "packs/summons",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat", "class"]
+          "types": [
+            "feat",
+            "class"
+          ]
         }
       }
     },
@@ -217,10 +270,14 @@
       "system": "n5eb",
       "path": "packs/npc",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -230,7 +287,7 @@
       "system": "n5eb",
       "path": "packs/cheat-sheets",
       "type": "JournalEntry",
-      "private": false
+      "ownership": false
     },
     {
       "name": "t7-class",
@@ -238,10 +295,15 @@
       "system": "n5eb",
       "path": "packs/t7-class",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -251,10 +313,15 @@
       "system": "n5eb",
       "path": "packs/t7-subclass",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -264,10 +331,13 @@
       "system": "n5eb",
       "path": "packs/t7-clan",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["race", "feat"]
+          "types": [
+            "race",
+            "feat"
+          ]
         }
       }
     },
@@ -277,10 +347,13 @@
       "system": "n5eb",
       "path": "packs/t7-backgrounds",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["background", "feat"]
+          "types": [
+            "background",
+            "feat"
+          ]
         }
       }
     },
@@ -290,10 +363,12 @@
       "system": "n5eb",
       "path": "packs/t7-feats",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -303,10 +378,14 @@
       "system": "n5eb",
       "path": "packs/t7-classmod",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat"]
+          "types": [
+            "class",
+            "subclass",
+            "feat"
+          ]
         }
       }
     },
@@ -316,10 +395,18 @@
       "system": "n5eb",
       "path": "packs/t7-items",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
         }
       }
     },
@@ -329,10 +416,12 @@
       "system": "n5eb",
       "path": "packs/t7-jutsus",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["spell"]
+          "types": [
+            "spell"
+          ]
         }
       }
     },
@@ -342,10 +431,14 @@
       "system": "n5eb",
       "path": "packs/t7-adversary",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -355,10 +448,13 @@
       "system": "n5eb",
       "path": "packs/t7-summons",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat", "class"]
+          "types": [
+            "feat",
+            "class"
+          ]
         }
       }
     },
@@ -368,10 +464,14 @@
       "system": "n5eb",
       "path": "packs/t7-npc",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -381,7 +481,7 @@
       "system": "n5eb",
       "path": "packs/t7-cheat-sheets",
       "type": "JournalEntry",
-      "private": false
+      "ownership": false
     },
     {
       "name": "hb-class",
@@ -389,10 +489,15 @@
       "system": "n5eb",
       "path": "packs/hb-class",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -402,10 +507,15 @@
       "system": "n5eb",
       "path": "packs/hb-subclass",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat", "weapon"]
+          "types": [
+            "class",
+            "subclass",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -415,10 +525,13 @@
       "system": "n5eb",
       "path": "packs/hb-clan",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["race", "feat"]
+          "types": [
+            "race",
+            "feat"
+          ]
         }
       }
     },
@@ -428,10 +541,13 @@
       "system": "n5eb",
       "path": "packs/hb-backgrounds",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["background", "feat"]
+          "types": [
+            "background",
+            "feat"
+          ]
         }
       }
     },
@@ -441,10 +557,12 @@
       "system": "n5eb",
       "path": "packs/hb-feats",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -454,10 +572,14 @@
       "system": "n5eb",
       "path": "packs/hb-classmod",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["class", "subclass", "feat"]
+          "types": [
+            "class",
+            "subclass",
+            "feat"
+          ]
         }
       }
     },
@@ -467,10 +589,18 @@
       "system": "n5eb",
       "path": "packs/hb-items",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
         }
       }
     },
@@ -480,10 +610,12 @@
       "system": "n5eb",
       "path": "packs/hb-jutsus",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["spell"]
+          "types": [
+            "spell"
+          ]
         }
       }
     },
@@ -493,10 +625,14 @@
       "system": "n5eb",
       "path": "packs/hb-adversary",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -506,10 +642,13 @@
       "system": "n5eb",
       "path": "packs/hb-summons",
       "type": "Item",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["feat", "class"]
+          "types": [
+            "feat",
+            "class"
+          ]
         }
       }
     },
@@ -519,10 +658,14 @@
       "system": "n5eb",
       "path": "packs/hb-npc",
       "type": "Actor",
-      "private": false,
+      "ownership": false,
       "flags": {
         "n5eb": {
-          "types": ["npc", "feat", "weapon"]
+          "types": [
+            "npc",
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
@@ -532,7 +675,7 @@
       "system": "n5eb",
       "path": "packs/hb-cheat-sheets",
       "type": "JournalEntry",
-      "private": false
+      "ownership": false
     }
   ],
   "packFolders": [
@@ -546,25 +689,46 @@
           "name": "Character Features",
           "sorting": "m",
           "color": "#338ec7",
-          "packs": ["class", "subclass", "backgrounds", "traits-quirks", "clan", "feats", "classmod"]
+          "packs": [
+            "class",
+            "subclass",
+            "backgrounds",
+            "traits-quirks",
+            "clan",
+            "feats",
+            "classmod"
+          ]
         },
         {
           "name": "Items & Jutsus",
           "sorting": "m",
           "color": "#af35b1",
-          "packs": ["items", "jutsus"]
+          "packs": [
+            "items",
+            "jutsus"
+          ]
         },
         {
           "name": "Adversary & Summons",
           "sorting": "m",
           "color": "#5db027",
-          "packs": ["adversary", "npc", "adversary-traits", "adversary-passives", "summons"]
+          "packs": [
+            "adversary",
+            "npc",
+            "adversary-traits",
+            "adversary-passives",
+            "summons"
+          ]
         },
         {
           "name": "Other",
           "sorting": "a",
           "color": "#698a2c",
-          "packs": ["rules", "cheat-sheets", "conditions"]
+          "packs": [
+            "rules",
+            "cheat-sheets",
+            "conditions"
+          ]
         }
       ]
     },
@@ -578,25 +742,41 @@
           "name": "T7 Character Features",
           "sorting": "a",
           "color": "#242670",
-          "packs": ["t7-class", "t7-subclass", "t7-backgrounds", "t7-clan", "t7-feats", "t7-classmod"]
+          "packs": [
+            "t7-class",
+            "t7-subclass",
+            "t7-backgrounds",
+            "t7-clan",
+            "t7-feats",
+            "t7-classmod"
+          ]
         },
         {
           "name": "T7 Items & Jutsus",
           "sorting": "a",
           "color": "#602478",
-          "packs": ["t7-items", "t7-jutsus"]
+          "packs": [
+            "t7-items",
+            "t7-jutsus"
+          ]
         },
         {
           "name": "T7 Adversary & Summons",
           "sorting": "a",
           "color": "#4e781c",
-          "packs": ["t7-adversary", "t7-npc", "t7-summons"]
+          "packs": [
+            "t7-adversary",
+            "t7-npc",
+            "t7-summons"
+          ]
         },
         {
           "name": "T7 Other",
           "sorting": "a",
           "color": "#4c6125",
-          "packs": ["t7-cheat-sheets"]
+          "packs": [
+            "t7-cheat-sheets"
+          ]
         }
       ]
     },
@@ -610,25 +790,41 @@
           "name": "HB Character Features",
           "sorting": "a",
           "color": "#4e6ce4",
-          "packs": ["hb-class", "hb-subclass", "hb-backgrounds", "hb-clan", "hb-feats", "hb-classmod"]
+          "packs": [
+            "hb-class",
+            "hb-subclass",
+            "hb-backgrounds",
+            "hb-clan",
+            "hb-feats",
+            "hb-classmod"
+          ]
         },
         {
           "name": "HB Items & Jutsus",
           "sorting": "a",
           "color": "#cf548f",
-          "packs": ["hb-items", "hb-jutsus"]
+          "packs": [
+            "hb-items",
+            "hb-jutsus"
+          ]
         },
         {
           "name": "HB Adversary & Summons",
           "sorting": "a",
           "color": "#6ad29c",
-          "packs": ["hb-adversary", "hb-npc", "hb-summons"]
+          "packs": [
+            "hb-adversary",
+            "hb-npc",
+            "hb-summons"
+          ]
         },
         {
           "name": "HB Other",
           "sorting": "a",
           "color": "#57a441",
-          "packs": ["hb-cheat-sheets"]
+          "packs": [
+            "hb-cheat-sheets"
+          ]
         }
       ]
     }
