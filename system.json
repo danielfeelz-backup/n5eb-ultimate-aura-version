@@ -4,8 +4,8 @@
   "description": "The N5e System forked from the DnD5e Foundry System. Made and altered by Benni.",
   "version": "2.1.0",
   "compatibility": {
-    "minimum": "11.315",
-    "verified": "12"
+    "minimum": "13",
+    "verified": "13"
   },
   "url": "https://github.com/ImBenni/n5eb/",
   "manifest": "https://raw.githubusercontent.com/ImBenni/n5eb/main/system.json",
