@@ -1,12 +1,4 @@
 {
-  "ACTOR.TypeCharacter": "Player Character",
-  "ACTOR.TypeCharacterPl": "Player Characters",
-  "ACTOR.TypeNpc": "Non-Player Character",
-  "ACTOR.TypeNpcPl": "Non-Player Characters",
-  "ACTOR.TypeVehicle": "Vehicle",
-  "ACTOR.TypeVehiclePl": "Vehicles",
-  "ACTOR.TypeGroup": "Group",
-
   "TYPES.Actor.character": "Player Character",
   "TYPES.Actor.characterPl": "Player Characters",
   "TYPES.Actor.npc": "Non-Player Character",
@@ -15,34 +7,6 @@
   "TYPES.Actor.vehiclePl": "Vehicles",
   "TYPES.Actor.group": "Group",
   "TYPES.Actor.groupPl": "Groups",
-
-  "ITEM.TypeBackground": "Background",
-  "ITEM.TypeBackgroundPl": "Backgrounds",
-  "ITEM.TypeContainer": "Container",
-  "ITEM.TypeContainerPl": "Containers",
-  "ITEM.TypeClass": "Class",
-  "ITEM.TypeClassPl": "Classes",
-  "ITEM.TypeClassmod": "Class Mod",
-  "ITEM.TypeClassmodPl": "Class Mods",
-  "ITEM.TypeConsumable": "Consumable",
-  "ITEM.TypeConsumablePl": "Consumables",
-  "ITEM.TypeEquipment": "Equipment",
-  "ITEM.TypeEquipmentPl": "Equipment",
-  "ITEM.TypeFeat": "Feature",
-  "ITEM.TypeFeaturePl": "Features",
-  "ITEM.TypeLoot": "Loot",
-  "ITEM.TypeLootPl": "Loot",
-  "ITEM.TypeRace": "Clan",
-  "ITEM.TypeRacePl": "Clans",
-  "ITEM.TypeSpell": "Jutsu",
-  "ITEM.TypeSpellPl": "Jutsus",
-  "ITEM.TypeSubclass": "Subclass",
-  "ITEM.TypeSubclassPl": "Subclasses",
-  "ITEM.TypeTool": "Tool",
-  "ITEM.TypeToolPl": "Tools",
-  "ITEM.TypeWeapon": "Weapon",
-  "ITEM.TypeWeaponPl": "Weapons",
-
   "TYPES.Item.background": "Background",
   "TYPES.Item.backgroundPl": "Backgrounds",
   "TYPES.Item.container": "Container",
@@ -54,7 +18,7 @@
   "TYPES.Item.equipment": "Equipment",
   "TYPES.Item.equipmentPl": "Equipment",
   "TYPES.Item.feat": "Feature",
-  "TYPES.Item.featurePl": "Features",
+  "TYPES.Item.featPl": "Features",
   "TYPES.Item.loot": "Loot",
   "TYPES.Item.lootPl": "Loot",
   "TYPES.Item.race": "Clan",
@@ -69,7 +33,6 @@
   "TYPES.Item.weaponPl": "Weapons",
   "TYPES.Item.classmod": "Class Mod",
   "TYPES.Item.classmodPl": "Class Mods",
-
   "N5EB.title": "Dungeon & Dragons Fifth Edition",
   "N5EB.AbbreviationCR": "CR",
   "N5EB.AbbreviationConc": "Conc.",
@@ -162,7 +125,6 @@
   "N5EB.AdditionalSettings": "Additional Settings",
   "N5EB.AddEmbeddedItemPromptHint": "Do you want to add these items to your character sheet?",
   "N5EB.Advanced": "Advanced",
-
   "N5EB.ADVANCEMENT": {
     "AbilityScoreImprovement": {
       "Title": "Ability Score Improvement",
@@ -271,7 +233,6 @@
   "N5EB.AdvancementHitPointsMaxAtFirstLevel": "Max at 1st Level: <strong>{max}</strong>",
   "N5EB.AdvancementHitPointsRollMessage": "Roll {class} Hit Points",
   "N5EB.AdvancementHitPointsRollButton": "Roll {die}",
-
   "N5EB.AdvancementChakraPointsTitle": "Chakra Points",
   "N5EB.AdvancementChakraPointsHint": "Track the player's chakra points for each level in the class.",
   "N5EB.AdvancementChakraPointsAverage": "Take Average",
@@ -280,7 +241,6 @@
   "N5EB.AdvancementChakraPointsMaxAtFirstLevel": "Max at 1st Level: <strong>{max}</strong>",
   "N5EB.AdvancementChakraPointsRollMessage": "Roll {class} Chakra Points",
   "N5EB.AdvancementChakraPointsRollButton": "Roll {die}",
-
   "N5EB.AdvancementItemChoiceTitle": "Choose Items",
   "N5EB.AdvancementItemChoiceHint": "Present the player with a choice of items (such as equipment, features, or jutsus) that they can choose for their character at one or more levels.",
   "N5EB.AdvancementItemChoiceChoices": "Choices",
@@ -1007,7 +967,7 @@
       "Inactive": "Inactive Enchantments"
     },
     "Configuration": "Enchantment Configuration",
-    "DropArea": "Place item here to enchant it…",
+    "DropArea": "Place item here to enchant it\u2026",
     "Enchanted": "{current} &sol; {max} enchanted",
     "FIELDS": {
       "enchantment": {
@@ -1127,13 +1087,12 @@
       "MartialTech": "Martial Technique",
       "BattleStyle": "Battle Style",
       "BattleTech": "Battle Technique",
-      "CursedTechnique" : "Cursed Technique",
+      "CursedTechnique": "Cursed Technique",
       "MinorBindingVow": "Minor Binding Vow",
       "MajorBindingVow": "Major Binding Vow",
       "WeaponTrick": "Weapon Trick",
       "RifleTrick": "Rifle Trick",
       "CaryllRune": "Caryll Rune",
-
       "ArtificerInfusion": "Artificer Infusion",
       "ChannelDivinity": "Channel Divinity",
       "DefensiveTactic": "Defensive Tactic",
@@ -1572,7 +1531,6 @@
       "LightWeight": "Lightweight",
       "Reinforced": "Reinforced",
       "Threatening": "Threatening",
-
       "ArmorPiercing": "Armor Piercing",
       "Catalyst": "Catalyst",
       "Gunpowder": "Gunpowder",
@@ -1581,7 +1539,6 @@
       "Shrapnel": "Shrapnel"
     }
   },
-
   "N5EB.ItemRechargeCheck": "{name} recharge check",
   "N5EB.ItemRechargeFailure": "failure!",
   "N5EB.ItemRechargeSuccess": "success!",
@@ -1695,7 +1652,6 @@
   "N5EB.LanguagesDraconic": "Draconic",
   "N5EB.LanguagesDruidic": "Druidic",
   "N5EB.LanguagesDwarvish": "Dwarvish",
-
   "N5EB.LanguagesFire": "Fire Dialect",
   "N5EB.LanguagesEarth": "Earth Dialect",
   "N5EB.LanguagesWater": "Water Dialect",
@@ -1707,7 +1663,6 @@
   "N5EB.LanguagesSnake": "Snake-Speak",
   "N5EB.LanguagesCat": "Cat-Speak",
   "N5EB.LanguagesToad": "Toad-Speak",
-
   "N5EB.LanguagesElvish": "Elvish",
   "N5EB.LanguagesExotic": "Exotic Languages",
   "N5EB.LanguagesGiant": "Giant",
@@ -2175,8 +2130,8 @@
     "DropHint": "Drop item here to link",
     "IfProficient": "If Proficient",
     "Operator": {
-      "AND": "All of…",
-      "OR": "One of…"
+      "AND": "All of\u2026",
+      "OR": "One of\u2026"
     },
     "RequireProficiency": "Require Proficiency",
     "SpecificItem": "Specific Item",
@@ -2569,7 +2524,6 @@
   "N5EB.of": "of",
   "N5EB.per": "per",
   "N5EB.spell": "jutsu",
-
   "N5EB.ComponentHandSeals": "Hand Seals",
   "N5EB.ComponentChakraMolding": "Chakra Molding",
   "N5EB.ComponentChakraSeals": "Chakra Seals",
@@ -2582,7 +2536,6 @@
   "N5EB.ComponentMobilityAbbr": "M",
   "N5EB.ComponentWeaponsAbbr": "W",
   "N5EB.ComponentNinjaToolsAbbr": "NT",
-
   "EDITOR.N5EB.Inline": {
     "ApplyStatus": "Apply Status to Selected Tokens",
     "AwardEach": "{award} each",
@@ -2604,7 +2557,6 @@
       "NoItemOnActor": "{actor} does not have an Item with name {item}."
     }
   },
-
   "EFFECT.N5EB": {
     "StatusBleeding": "Bleeding",
     "StatusBurrowing": "Burrowing",
@@ -2627,7 +2579,6 @@
     "StatusSurprised": "Surprised",
     "StatusTransformed": "Transformed"
   },
-
   "TYPES.JournalEntryPage.class": "Class Summary",
   "TYPES.JournalEntryPage.map": "Map Location",
   "TYPES.JournalEntryPage.rule": "Rule",
@@ -2658,7 +2609,7 @@
       "OptionalFeaturesDescription": "The following section contains options {class} features. These features are not granted automatically, and you can choose one, some, or all of them at your DM's discretion.",
       "SpellSlotLevel": "Slot Level",
       "SpellSlots": "Spell Slots",
-      "SpellSlotsPerSpellLevel": "—Spell Slots per Spell Level—",
+      "SpellSlotsPerSpellLevel": "\u2014Spell Slots per Spell Level\u2014",
       "SubclassHeader": "Subclass Header",
       "SubclassHint": "Drop subclasses here",
       "SubclassDescription": "Subclass Introduction",
@@ -2700,12 +2651,10 @@
       "NoValidSubclass": "No valid subclass selected, press the edit button to add a subclass."
     }
   },
-
   "MACRO.5eMissingTargetWarn": "Your controlled actor '{actor}' does not have an {type} with name '{name}'.",
   "MACRO.5eMultipleTargetsWarn": "Your controlled actor '{actor}' has more than one {type} with name '{name}'. The first match will be chosen.",
   "MACRO.5eNoActorSelected": "No selected or assigned actor could be found to target with macro.",
   "MACRO.5eUnownedWarn": "You can only create macro buttons for owned Items",
-
   "MIGRATION.5eBegin": "Applying D&D 5e System Migration for version {version}. Please be patient and do not close your game or shut down your server.",
   "MIGRATION.5eComplete": "D&D 5e System Migration to version {version} completed!",
   "MIGRATION.5eVersionTooOldWarning": "Your D&D 5e system data is from too old a Foundry version and cannot be reliably migrated to the latest version. The process will be attempted, but errors may occur.",
@@ -2801,7 +2750,6 @@
       "Hint": "Theme that will apply to the UI and all sheets by default. Automatic will be determined by your browser or operating system settings."
     }
   },
-
   "SHEETS.N5EB": {
     "THEME": {
       "Label": "Theme",
@@ -2810,7 +2758,6 @@
       "Light": "Light Mode"
     }
   },
-
   "SOURCE.BOOK.SRD": "System Reference Document 5.1",
   "SIDEBAR.SortModePriority": "Sort by priority"
 }

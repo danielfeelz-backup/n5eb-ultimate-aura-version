@@ -32523,11 +32523,11 @@ preLocalize("spellSchools", { key: "label", sort: true });
  * @enum {string}
  */
 N5EB.spellListTypes = {
-  class: "ITEM.TypeClass",
-  subclass: "ITEM.TypeSubclass",
-  classmod: "ITEM.TypeClassmod",
-  background: "ITEM.TypeBackground",
-  race: "ITEM.TypeRace",
+  class: "TYPES.Item.class",
+  subclass: "TYPES.Item.subclass",
+  classmod: "TYPES.Item.classmod",
+  background: "TYPES.Item.background",
+  race: "TYPES.Item.race",
   other: "JOURNALENTRYPAGE.N5EB.SpellList.Type.Other",
 };
 preLocalize("spellListTypes");
